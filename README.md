@@ -16,7 +16,7 @@ mindmap
     Базы данных
       Task Database
       User Data Storage
-
+```
 ### Пояснение:
 - **Пользовательские интерфейсы:** Веб-приложение и интеграция с ботом Telegram.
 - **Backend:** Основные модули, включая движок рекомендаций и управление пользователями.
@@ -44,7 +44,7 @@ sequenceDiagram
   TaskDB-->>RecEngine: Возвращает данные
   RecEngine-->>WebApp: Отправляет рекомендации
   WebApp-->>User: Показывает рекомендации
-
+```
 ### Пояснение:
 1. **User:** Начинает взаимодействие с веб-приложением.
 2. **WebApp:** Запрашивает данные у движка рекомендаций.
@@ -80,7 +80,7 @@ gitGraph
   commit id: "Push уведомления"
   checkout main
   merge feature/notifications
-
+```
 ### Пояснение:
 - **Feature/login:** Разработка функций авторизации.
 - **Feature/recommendations:** Движок рекомендаций с интеграцией машинного обучения.
@@ -121,7 +121,7 @@ quadrantChart
     Dark Mode: [0.25, 0.90]              
     Multi-language Support: [0.88, 0.40] 
     A/B Testing Module: [0.35, 0.65]     
-
+```
 ### Пояснение:
 - **High Priority:** Критически важные функции для системы.
 - **Need Further Promotion:** Функции с высоким потенциалом роста.
