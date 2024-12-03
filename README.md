@@ -32,15 +32,28 @@ mindmap
 sequenceDiagram
   participant User
   participant WebApp
+  participant API Gateway
   participant RecEngine
+  participant RulesEngine
   participant TaskDB
+  participant UserDB
   
-  User->>WebApp: Открывает главную страницу
-  WebApp->>RecEngine: Запрос рекомендаций
+  User->>WebApp: Входит в систему
+  WebApp->>API Gateway: Проверка авторизации
+  API Gateway->>UserDB: Проверяет учетные данные
+  UserDB-->>API Gateway: Подтверждение успешной авторизации
+  API Gateway-->>WebApp: Доступ разрешен
+  
+  User->>WebApp: Запрос на получение рекомендаций
+  WebApp->>API Gateway: Отправляет запрос на рекомендации
+  API Gateway->>RecEngine: Запрос на генерацию рекомендаций
+  RecEngine->>RulesEngine: Проверяет бизнес-правила
+  RulesEngine-->>RecEngine: Возвращает результаты проверки
   RecEngine->>TaskDB: Получает данные о заданиях
-  TaskDB-->>RecEngine: Возвращает данные
-  RecEngine-->>WebApp: Отправляет рекомендации
-  WebApp-->>User: Показывает рекомендации
+  TaskDB-->>RecEngine: Возвращает задачи
+  RecEngine-->>API Gateway: Отправляет рекомендации
+  API Gateway-->>WebApp: Возвращает рекомендации
+  WebApp-->>User: Показывает рекомендации на интерфейсе
 ```
 
 ### Пояснение:
