@@ -24,12 +24,9 @@ mindmap
 
 ---
 
-## Sequence Diagram
+# Sequence Diagram
 
 **Описание:** Показывает последовательность взаимодействий пользователя с системой рекомендаций.
-
-```markdown
-# Последовательность взаимодействий
 
 ```mermaid
 sequenceDiagram
@@ -54,12 +51,9 @@ sequenceDiagram
 
 ---
 
-## Git Graph
+# Git Graph
 
 **Описание:** Демонстрирует процесс разработки с ветками и слияниями.
-
-```markdown
-# История разработки
 
 ```mermaid
 gitGraph
@@ -90,12 +84,9 @@ gitGraph
 
 ---
 
-## Quadrant Chart
+# Quadrant Chart
 
 **Описание:** Приоритизация функционала по степени важности и вовлечённости.
-
-```markdown
-# Приоритизация функциональных возможностей
 
 ```mermaid
 quadrantChart
